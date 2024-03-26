@@ -172,7 +172,7 @@ impl<'vtab> VTab<'vtab> for GenerateSeriesTable {
 }
 
 #[sqlite_entrypoint]
-pub fn sqlite3_sqlitecsv_init(db: *mut sqlite3) -> Result<()> {
+pub fn sqlite3_sqlitegenrs_init(db: *mut sqlite3) -> Result<()> {
     let _ = define_table_function::<GenerateSeriesTable>(db, "generate_series_rs", None);
     Ok(())
 }
