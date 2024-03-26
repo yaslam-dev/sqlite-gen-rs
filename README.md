@@ -12,6 +12,11 @@
 # Benchmark
 
 ```js
+SQLite version 3.45.2 2024-03-12 11:06:23
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .load ./target/debug/libsqlite_gen_rs
 sqlite> .timer on
 sqlite> select count(value) from generate_series_rs(1,1e7,1);
 10000000
